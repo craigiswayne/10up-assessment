@@ -1,0 +1,30 @@
+@import "./core";
+$containerSelector: '.editor-post-taxonomies__hierarchical-terms-choice';
+$containerSelector: '.editor-post-taxonomies__hierarchical-terms-choice';
+@include render_styles_for_container($containerSelector);
+
+#{$containerSelector} {
+	.#{$cta_class} {
+		position: absolute;
+		right: 0;
+		top: 0;
+		opacity: 0;
+	}
+
+	&:hover .#{$cta_class} {
+		opacity: 1;
+		display: inline;
+	}
+
+	label.#{$label_active_class}:after{
+		position: relative;
+		top: -1px;
+	}
+
+
+	.components-base-control__field,
+	.components-base-control {
+		display: inline;
+	}
+
+}

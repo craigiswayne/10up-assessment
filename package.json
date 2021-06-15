@@ -1,0 +1,33 @@
+{
+  "name": "cw-primary-category",
+  "version": "0.0.1",
+  "main": "Gruntfile.js",
+  "author": "Craig Wayne",
+  "scripts": {
+    "start-grunt": "grunt default",
+    "js:minify": "uglifyjs --compress --mangle -o build/scripts/editor_classic.js -- src/scripts/editor_classic.js",
+    "block:watch": "wp-scripts start src/scripts/editor_block.js --output-path=build/scripts/editor_block",
+    "block:build": "wp-scripts build src/scripts/editor_block.js --output-path=build/scripts/editor_block",
+    "css:compile": "node-sass src/styles -o build/styles --source-comments=false --source-map=true --output-style=compressed --error-bell",
+    "css:watch": "npm run css:compile -- --watch"
+  },
+  "devDependencies": {
+    "@wordpress/api-fetch": "^5.1.1",
+    "@wordpress/components": "^14.1.2",
+    "@wordpress/core-data": "^3.1.4",
+    "@wordpress/data": "^5.1.1",
+    "@wordpress/editor": "^10.1.4",
+    "@wordpress/element": "^3.1.1",
+    "@wordpress/hooks": "^3.1.1",
+    "@wordpress/scripts": "^16.1.2",
+    "@wordpress/url": "^3.1.1",
+    "grunt": "~0.4.5",
+    "grunt-wp-i18n": "~0.5.0",
+    "grunt-wp-readme-to-markdown": "~1.0.0",
+    "node-sass": "^6.0.0",
+    "uglify-js": "^3.13.9"
+  },
+  "dependencies": {
+    "@wordpress/compose": "^4.1.1"
+  }
+}
